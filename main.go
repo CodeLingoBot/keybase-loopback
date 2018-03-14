@@ -51,7 +51,7 @@ func main() {
 		fuse.FSName("loopback"),
 		fuse.Subtype("loopback-fs"),
 		fuse.VolumeName("goLoopback"),
-		fuse.AllowRoot(),
+		//fuse.AllowRoot(),
 	)
 	if err != nil {
 		log.Fatal(err)
