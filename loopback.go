@@ -647,7 +647,7 @@ func (n *Node) Getxattr(ctx context.Context,
 			return nil
 		}
 	}
-	return fuse.ENODATA
+	return fuse.ErrNoXattr
 }
 
 var _ fs.NodeListxattrer = (*Node)(nil)
@@ -741,7 +741,7 @@ func (n *Node) Removexattr(ctx context.Context,
 			return nil
 		}
 	}
-	return fuse.ENODATA
+	return fuse.ErrNoXattr
 }
 
 var _ fs.NodeForgetter = (*Node)(nil)
